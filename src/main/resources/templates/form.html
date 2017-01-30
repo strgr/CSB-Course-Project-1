@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Sign up form</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    </head>
+    
+    <script>
+    function theFunction () {
+    alert("Thank you! You have been signed up to the event!");
+      
+  
+           
+    }
+</script>
+    
+    <script>
+    function visitPage(){
+        window.location='http://localhost:8080/participants.html';
+    }
+</script>
+    
+    <body>
+
+        <h1>Sign up to the event using this form</h1>
+
+        <form action="#" th:action="@{/form}" method="POST">
+            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
+            <p><label for="address">Address</label>: <input type="text" name="address" id="address"/></p>
+            <p><input type="submit" value="Submit" onclick="return theFunction();" /></p>
+           
+        </form>
+        
+      
+        
+       
+       
+        
+        
+<button onclick="visitPage();">Participants</button>
+
+
+
+ <h3>Log in to event Administrator site</h3>
+
+        <form action="#" th:action="@{/login}" method="GET">
+           
+            <p><label for="username">Username</label>: <input type="text" name="username" id="username"/></p>
+            <p><label for="password">Password</label>: <input type="password" name="password" id="password"/></p>
+        
+            <p><input type="submit" value="Admin" /></p>
+            </form>
+        <p></p>
+    </body>
+</html>

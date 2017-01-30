@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Participants</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    </head>
+    <body>
+        <h1>Participants</h1>
+ 
+        <h2>Registered participants</h2>
+ 
+        
+        
+        <ul>
+            <li th:each="member : ${signups}">
+                <span th:utext="${member.getName()}"></span>
+            </li>
+        </ul>
+
+
+        
+       
+        
+        
+ 
+       
+    </body>
+</html>
